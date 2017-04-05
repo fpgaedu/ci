@@ -1,0 +1,25 @@
+# This file contains configuration information for the provisioning scripts.
+
+vagrant: 
+    boxes:
+        # ubuntu+vivado webpack edition base box names
+        ubuntu_16_04_x64_vivado_2016_4_webpack: fpgaedu/ubuntu_16_04_x64_vivado_2016_4_webpack
+        ubuntu_16_04_x64_vivado_2016_3_webpack: fpgaedu/ubuntu_16_04_x64_vivado_2016_3_webpack
+        ubuntu_16_04_x64_vivado_2016_2_webpack: fpgaedu/ubuntu_16_04_x64_vivado_2016_2_webpack
+        ubuntu_16_04_x64_vivado_2016_1_webpack: fpgaedu/ubuntu_16_04_x64_vivado_2016_1_webpack
+        # ubuntu+vivado lab edition base box names
+        ubuntu_16_04_x64_vivado_2016_4_lab: fpgaedu/ubuntu_16_04_x64_vivado_2016_4_webpack
+        ubuntu_16_04_x64_vivado_2016_3_lab: fpgaedu/ubuntu_16_04_x64_vivado_2016_3_webpack
+        ubuntu_16_04_x64_vivado_2016_2_lab: fpgaedu/ubuntu_16_04_x64_vivado_2016_2_webpack
+        ubuntu_16_04_x64_vivado_2016_1_lab: fpgaedu/ubuntu_16_04_x64_vivado_2016_1_webpack
+
+jenkins:
+    slave_uri: http://ci.fpgaedu.com/jnlpJars/slave.jar
+
+fpga:
+    nexys4:
+        # Nexys 4 serial can easily be acquired though execution of:
+        # $ lsusb -d 0403:6010 -v | grep iSerial
+        usb_serial_number: 123456789012
+
+
