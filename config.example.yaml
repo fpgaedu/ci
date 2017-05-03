@@ -3,15 +3,17 @@
 vagrant: 
     boxes:
         # ubuntu+vivado webpack edition base box names
-        ubuntu_16_04_x64_vivado_2016_4_webpack: fpgaedu/ubuntu_16_04_x64_vivado_2016_4_webpack
-        ubuntu_16_04_x64_vivado_2016_3_webpack: fpgaedu/ubuntu_16_04_x64_vivado_2016_3_webpack
-        ubuntu_16_04_x64_vivado_2016_2_webpack: fpgaedu/ubuntu_16_04_x64_vivado_2016_2_webpack
-        ubuntu_16_04_x64_vivado_2016_1_webpack: fpgaedu/ubuntu_16_04_x64_vivado_2016_1_webpack
+        ubuntu_16_04_x64_vivado_2017_1_webpack: fpgaedu/ubuntu-16-04-x64-vivado-2017-1-webpack
+        ubuntu_16_04_x64_vivado_2016_4_webpack: fpgaedu/ubuntu-16-04-x64-vivado-2016-4-webpack
+        ubuntu_16_04_x64_vivado_2016_3_webpack: fpgaedu/ubuntu-16-04-x64-vivado-2016-3-webpack
+        ubuntu_16_04_x64_vivado_2016_2_webpack: fpgaedu/ubuntu-16-04-x64-vivado-2016-2-webpack
+        ubuntu_16_04_x64_vivado_2016_1_webpack: fpgaedu/ubuntu-16-04-x64-vivado-2016-1-webpack
         # ubuntu+vivado lab edition base box names
-        ubuntu_16_04_x64_vivado_2016_4_lab: fpgaedu/ubuntu_16_04_x64_vivado_2016_4_webpack
-        ubuntu_16_04_x64_vivado_2016_3_lab: fpgaedu/ubuntu_16_04_x64_vivado_2016_3_webpack
-        ubuntu_16_04_x64_vivado_2016_2_lab: fpgaedu/ubuntu_16_04_x64_vivado_2016_2_webpack
-        ubuntu_16_04_x64_vivado_2016_1_lab: fpgaedu/ubuntu_16_04_x64_vivado_2016_1_webpack
+        ubuntu_16_04_x64_vivado_2017_1_lab: fpgaedu/ubuntu-16-04-x64-vivado-2017-1-webpack
+        ubuntu_16_04_x64_vivado_2016_4_lab: fpgaedu/ubuntu-16-04-x64-vivado-2016-4-webpack
+        ubuntu_16_04_x64_vivado_2016_3_lab: fpgaedu/ubuntu-16-04-x64-vivado-2016-3-webpack
+        ubuntu_16_04_x64_vivado_2016_2_lab: fpgaedu/ubuntu-16-04-x64-vivado-2016-2-webpack
+        ubuntu_16_04_x64_vivado_2016_1_lab: fpgaedu/ubuntu-16-04-x64-vivado-2016-1-webpack
 
 jenkins:
     slave_uri: http://ci.fpgaedu.com/jnlpJars/slave.jar

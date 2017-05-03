@@ -1,0 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+ENV["LC_ALL"] = "en_US.UTF-8"
+
+# Read configuration from config.yaml
+require 'yaml'
+config = YAML.load_file(File.join('..', 'config.yaml'))
+nexus4_usb_serial_number = config['fpga']['nexys4']['usb_serial_number']
+base_box_name = config['vagrant']['boxes']['ubuntu_16_04_x64_vivado_2016_4_lab']
+
+Vagrant.configure("2") do |config|
+  config.vm.box = fpgaedu/fpgaedu/ubuntu-16-04-vivado-2017-1-lab
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = false
+    vb.memory = "2048"
+    # Pass through nexys4 usb to vm
+    vb.customize ['modifyvm', :id, '--usb', 'on']
+    vb.customize ['modifyvm', :id, '--usbehci', 'on']
+    vb.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'nexys4', '--serialnumber', nexus4_usb_serial_number]
+  end  
+end

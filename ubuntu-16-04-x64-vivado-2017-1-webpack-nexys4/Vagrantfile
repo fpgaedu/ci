@@ -7,7 +7,7 @@ ENV["LC_ALL"] = "en_US.UTF-8"
 require 'yaml'
 config = YAML.load_file(File.join('..', '..', 'config.yaml'))
 nexus4_usb_serial_number = config['fpga']['nexys4']['usb_serial_number']
-base_box_name = config['vagrant']['boxes']['ubuntu_16_04_x64_vivado_2016_4_lab']
+base_box_name = config['vagrant']['boxes']['ubuntu_16_04_x64_vivado_2017_1_webpack']
 
 Vagrant.configure("2") do |config|
   config.vm.box = base_box_name
