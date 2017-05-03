@@ -5,5 +5,4 @@ SCRIPT_DIR=$(dirname "$SCRIPT")
 cd $SCRIPT_DIR
 cd $1
 
-vagrant destroy
-
+vagrant destroy -f
