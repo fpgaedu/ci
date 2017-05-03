@@ -12,6 +12,10 @@ base_box_name = config['vagrant']['boxes']['ubuntu_16_04_x64_vivado_2017_1_lab']
 Vagrant.configure("2") do |config|
   config.vm.box = base_box_name
 
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "../playbook/jenkins.yaml"
+  end
+
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
     vb.memory = "2048"

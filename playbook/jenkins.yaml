@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+      - name: install java jre
+        become: true
+        apt:
+            name: default-jre
+            update_cache: true
+            state: present
+
